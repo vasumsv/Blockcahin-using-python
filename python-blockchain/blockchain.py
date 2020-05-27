@@ -1,24 +1,24 @@
-from block import Block        
-
+from block import Block
 class Blockchain:
-    
-    """
-    Blokchain is a  public ledger  of transactions.
-    Implemented as a  list of blocks - data sets of transactions 
-    """
 
-    def __init__(self):
-        self.chain = []
+    def __init__(self):  #init function
+        self.chain = [Block.genesis()]
 
-    def add_block(self,data):
-        self.chain.append(Block(data))
+    def add_block(self,data):  #add a new block function 
+        self.chain.append(Block.mine_block(self.chain[-1],data))  #last_block and data the first block -1 represent the first block
 
-    def __repr__(self):
-        return f'Blockchain:{self.chain}'
 
-blockchain = Blockchain()
-blockchain.add_block('one')
-blockchain.add_block('two')
-blockchain.add_block('vasu')
+    def __repr__(self):  #represent method
+        return f'Blockchain: {self.chain}'
 
-print(blockchain)
+def main():
+    blockchain = Blockchain()
+    blockchain.add_block("one")
+    blockchain.add_block("two")
+
+    print(blockchain)
+
+    print(f'blockchain.py __name__: {__name__}')
+
+if __name__ == '__main__':
+    main()
