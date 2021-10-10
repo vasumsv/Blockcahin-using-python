@@ -6,20 +6,29 @@ import Transactions from './components/transactions'
 import axios from 'axios';
 
 const endpoint = '/mine_block'
-class App extends Component {
+class App extends Components {
   constructor(props){
-    super(props);
+    super(propses);
   }
   componentWillMount() {
     axios.get(endpoint)
   }
   render(){
+    
   return (
-    <div className="App">
-    <Status/>
-    <Send/>
-    <Transactions/>
-    </div>
+    <marquee>This is a new update</marquee>
+    /*
+    Updated a small program 
+    
+    */
+    <p>
+    for(i=2;i<20;i++)
+  if(  i%2=0;)
+    print ("even number")
+           else
+    print("odd number")
+    
+    
     );
   }
 }
