@@ -1,2 +1,2 @@
-# Blockcahin-using-python
+# Blockchain-using-python
 Build a blockchain using Python,JS &amp; React
